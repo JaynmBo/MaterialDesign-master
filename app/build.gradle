@@ -27,7 +27,8 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-
     implementation 'com.android.support:design:29.0.0'
     implementation 'com.android.support:recyclerview-v7:29.0.0'
+
+    implementation 'com.github.stephanenicolas:butterknife:10.0.0.6'
 }

@@ -5,8 +5,13 @@ import android.os.Bundle;
 import com.caobo.slideviewdemo.R;
 import com.google.android.material.tabs.TabLayout;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
 
 /**
  * Created by cb
@@ -14,7 +19,10 @@ import androidx.appcompat.app.AppCompatActivity;
  */
 public class TabLayoutActivity extends AppCompatActivity {
 
+    private List<Fragment> fragments = new ArrayList<>();
     private TabLayout tabLayout;
+
+    private ViewPager viewPage;
 
     private String mTitles[] = {
             "西安", "头条推荐", "生活", "娱乐八卦", "体育",
@@ -27,6 +35,7 @@ public class TabLayoutActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tablayout);
+        viewPage = findViewById(R.id.viewPage);
         tabLayout = findViewById(R.id.tabLayout);
         // 设置TAB滚动显示
         tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
@@ -60,6 +69,14 @@ public class TabLayoutActivity extends AppCompatActivity {
 
             }
         });
+
+        for (int i = 0; i < mTitles.length; i++) {
+            fragments.add(MyFragment.newInstance(i));
+        }
+
+        viewPage.setAdapter(new FragmentAdapter(getSupportFragmentManager(), tabLayout.getTabCount(), fragments));
+        viewPage.setCurrentItem(1);
+
 
     }
 }
