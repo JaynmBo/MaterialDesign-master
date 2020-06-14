@@ -24,23 +24,25 @@ abstract class LazyFragment extends Fragment {
      */
     private boolean isViewCreated = false;
 
+    /**
+     * 当前显示状态
+     */
     private boolean currentVisibleState = false;
-
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         if (rootView == null) {
-
+            rootView = inflater.inflate(getLayoutId(), container, false);
         }
-        rootView = inflater.inflate(getLayoutId(), container, false);
         ButterKnife.bind(this, rootView);
         mContext = getActivity();
 
         initView(rootView);
         isViewCreated = true;
 
+        // 第一次加载时，分发加载数据方法
         if (getUserVisibleHint()) {
             disPatchUserVisibleHint(true);
         }
@@ -50,9 +52,16 @@ abstract class LazyFragment extends Fragment {
     protected abstract void initView(View rootView);
 
 
+    /**
+     * 判断Fragment是否可见
+     *
+     * @param isVisibleToUser
+     */
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
+
+        // 当View已经加载完毕
         if (isViewCreated) {
             // 从不可见到可见
             if (isVisibleToUser == true && !currentVisibleState) {
@@ -61,6 +70,7 @@ abstract class LazyFragment extends Fragment {
                 disPatchUserVisibleHint(false);
             }
 
+//            disPatchUserVisibleHint(isVisibleToUser);
 
         }
     }
@@ -76,12 +86,13 @@ abstract class LazyFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        if (!currentVisibleState && getUserVisibleHint()) {
-            disPatchUserVisibleHint(true);
-        }
+//        if (!currentVisibleState && getUserVisibleHint()) {
+//            disPatchUserVisibleHint(true);
+//        }
     }
 
     private void disPatchUserVisibleHint(boolean isVisible) {
+        // 解决跨页面跳转重复加载数据问题，如果当前加载状态=isVisible时，不再重复分发
         if (currentVisibleState == isVisible) {
             return;
         }
@@ -91,18 +102,11 @@ abstract class LazyFragment extends Fragment {
         } else {
             onFragmentLoadStop();
         }
-
-
     }
 
-    public void onFragmentLoadStop() {
+    public void onFragmentLoadStop() {}
 
-    }
-
-    public void onFragmentLoad() {
-
-
-    }
+    public void onFragmentLoad() {}
 
     /**
      * 获取布局ID

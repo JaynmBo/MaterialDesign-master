@@ -13,6 +13,13 @@ import com.caobo.slideviewdemo.R;
  */
 public class MyFragment extends LazyFragment {
 
+
+    private String mTitles[] = {
+            "西安", "头条推荐", "生活", "娱乐八卦", "体育",
+            "段子", "美食", "电影", "科技",};
+
+    private int tabIndex;
+
     private TextView textView;
 
     public static MyFragment newInstance(int position) {
@@ -28,28 +35,22 @@ public class MyFragment extends LazyFragment {
     protected void initView(View rootView) {
         tabIndex = getArguments().getInt("position");
         textView = rootView.findViewById(R.id.textView);
-
-        textView.setText(tabIndex + "");
     }
+
 
     @Override
     protected int getLayoutId() {
         return R.layout.fragment_tablayout;
     }
 
-    private int tabIndex;
-
-    @Override
-    public void setUserVisibleHint(boolean isVisibleToUser) {
-        tabIndex = getArguments().getInt("position");
-        super.setUserVisibleHint(isVisibleToUser);
-    }
 
     @Override
     public void onFragmentLoad() {
         super.onFragmentLoad();
+        tabIndex = getArguments().getInt("position");
+        Log.e("TAG", "onFragmentLoad: 加载 : " + mTitles[tabIndex]);
+        textView.setText(mTitles[tabIndex]);
     }
-
 
     @Override
     public void onFragmentLoadStop() {
@@ -57,6 +58,6 @@ public class MyFragment extends LazyFragment {
 
         tabIndex = getArguments().getInt("position");
         // 暂停一切操作
-        Log.e("TAG", "onFragmentLoadStop: tabIndex : " + tabIndex);
+        Log.e("TAG", "onFragmentLoadStop: 停止加载 : " + mTitles[tabIndex]);
     }
 }
