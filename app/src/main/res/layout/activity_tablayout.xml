@@ -5,8 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+    
 
     <androidx.appcompat.widget.Toolbar
+        app:title="TabLayout"
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
@@ -20,7 +22,7 @@
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></com.google.android.material.tabs.TabLayout>
+        android:layout_height="wrap_content"/>
 
     <View
         android:background="#c1c1c1"
