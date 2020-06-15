@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:navigationIcon="@drawable/abc_vector_test"
+        app:subtitleTextColor="#FFF"
+        app:title="SnackBar"
+        app:titleTextColor="#FFF"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onSnackClick"
+        android:text="SnackBar 基础使用"
+        android:textAllCaps="false"
+        android:textSize="14dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onSnackTextColorClick"
+        android:text="SnackBar 文本颜色和背景颜色"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
+        android:textSize="14dp" />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onSnackActionClick"
+        android:text="SnackBar setAction 使用"
+        android:textAllCaps="false"
+        android:textSize="14dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onSnackActionTextColorClick"
+        android:text="SnackBar setAction 字体颜色"
+        android:textAllCaps="false"
+        android:textSize="14dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onSnackAddClick"
+        android:text="SnackBar addCallback 监听"
+        android:textAllCaps="false"
+        android:textSize="14dp" />
+
+
+</LinearLayout>

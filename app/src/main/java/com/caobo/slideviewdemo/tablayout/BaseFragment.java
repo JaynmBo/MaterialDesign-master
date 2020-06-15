@@ -14,8 +14,8 @@ import butterknife.ButterKnife;
 /**
  * File descripition:
  *
- * @author lp
- * @date 2019/3/15
+ * @author cb
+ * @date 2020/6/15
  */
 
 public abstract class BaseFragment extends Fragment {

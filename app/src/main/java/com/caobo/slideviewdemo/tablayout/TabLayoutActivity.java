@@ -2,6 +2,9 @@ package com.caobo.slideviewdemo.tablayout;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.TextView;
 
 import com.caobo.slideviewdemo.R;
 import com.google.android.material.tabs.TabLayout;
@@ -57,13 +60,25 @@ public class TabLayoutActivity extends AppCompatActivity {
         for (String mTitle : mTitles) {
             tabLayout.addTab(tabLayout.newTab().setText(mTitle));
         }
-        for (int i = 0; i < mTitles.length ; i++) {
-            fragments.add(MyFragment.newInstance(i));
+        for (int i = 0; i < mTitles.length; i++) {
+            fragments.add(MyFragment2.newInstance(i));
         }
 
         viewPage.setAdapter(new FragmentAdapter(getSupportFragmentManager(), tabLayout.getTabCount()));
         // 设置ViewPager默认显示index
         viewPage.setCurrentItem(0);
+
+
+        // 调用系统API设置ICON
+        for (int i = 0; i < mTitles.length; i++) {
+            tabLayout.getTabAt(i).setIcon(getResources().getDrawable(R.drawable.ic_baseline_account_balance_24));
+        }
+
+        // 自定义Tab文本和ICON
+//        for (int i = 0; i < mTitles.length; i++) {
+//            tabLayout.getTabAt(i).setCustomView(setCustomTab(i));
+//        }
+
     }
 
 
@@ -89,5 +104,19 @@ public class TabLayoutActivity extends AppCompatActivity {
         public int getCount() {
             return fragments.size();
         }
+    }
+
+
+    /**
+     * 自定义Tab View
+     *
+     * @param i
+     * @return
+     */
+    private View setCustomTab(int i) {
+        View view = LayoutInflater.from(this).inflate(R.layout.tab_item, null);
+        TextView textView = view.findViewById(R.id.title);
+        textView.setText(mTitles[i]);
+        return view;
     }
 }
