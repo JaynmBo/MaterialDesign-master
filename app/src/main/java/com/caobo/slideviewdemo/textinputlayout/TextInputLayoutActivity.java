@@ -1,6 +1,8 @@
 package com.caobo.slideviewdemo.textinputlayout;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 
 import com.caobo.slideviewdemo.R;
 import com.google.android.material.textfield.TextInputLayout;
@@ -23,25 +25,35 @@ public class TextInputLayoutActivity extends AppCompatActivity {
 
         userInputLayout = findViewById(R.id.userInputLayout);
 
-
-        // 是否获取焦点的时候，hint文本上移到左上角开启动画，默认True开启状态
-        userInputLayout.setHintAnimationEnabled(false);
-
         // 开启错误提示
         userInputLayout.setErrorEnabled(true);
         // 开启计数
         userInputLayout.setCounterEnabled(true);
         // 设置输入最大长度
         userInputLayout.setCounterMaxLength(10);
-
-        // 是否开启浮动标签
-        userInputLayout.setHintEnabled(true);
-
         // 设置浮动标签字体样式
         userInputLayout.setHintTextAppearance(R.style.hintAppearence);
 
-        // 设置
+        userInputLayout.getEditText().addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // 文本变化前调用
+            }
 
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                // 文本发生变化时调用
+            }
 
+            @Override
+            public void afterTextChanged(Editable s) {
+                // 文本发生变化后调用
+                if(userInputLayout.getEditText().getText().toString().trim().length()>10){
+                    userInputLayout.setError("用户名长度超出限制");
+                }else{
+                    userInputLayout.setError(null);
+                }
+            }
+        });
     }
 }
