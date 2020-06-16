@@ -9,17 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.caobo.slideviewdemo.textinputlayout.TextInputLayoutActivity">
+        <activity android:name=".drawerlayout.DrawerLayoutActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".toolbar.ToolBarActivity"/>
-        <activity android:name=".toolbar.ToolBarDemoActivity"/>
-        <activity android:name=".tablayout.TabLayoutActivity"/>
-        <activity android:name=".snackbar.SnackBarActivity"/>
+        <activity android:name=".toolbar.ToolBarActivity" />
+        <activity android:name=".toolbar.ToolBarDemoActivity" />
+        <activity android:name=".tablayout.TabLayoutActivity" />
+        <activity android:name=".snackbar.SnackBarActivity" />
+        <activity android:name=".textinputlayout.TextInputLayoutActivity" />
     </application>
 
 </manifest>
