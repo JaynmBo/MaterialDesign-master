@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -19,20 +19,73 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:onClick="toolbarClick"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:gravity="center"
+        android:onClick="toolbarClick"
         android:text="ToolBar"
+        android:textAllCaps="false"
         android:textSize="14dp" />
+
     <Button
-        android:onClick="toolbarClick"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:gravity="center"
+        android:onClick="snackBarClick"
+        android:text="SnackBar"
+        android:textAllCaps="false"
+        android:textSize="14dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:onClick="tabLayoutClick"
+        android:text="TabLayout"
+        android:textAllCaps="false"
+        android:textSize="14dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:onClick="textInputLayoutClick"
+        android:text="TextInputLayout"
+        android:textAllCaps="false"
+        android:textSize="14dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:onClick="drawerLayoutClick"
+        android:text="DrawerLayout + NavigationView"
+        android:textAllCaps="false"
+        android:textSize="14dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:onClick="coordinatorClick"
         android:text="CoordinatorLayout"
+        android:textAllCaps="false"
+        android:textSize="14dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:onClick="toolbarClick"
+        android:text="CoordinatorLayout"
+        android:textAllCaps="false"
         android:textSize="14dp" />
 
 

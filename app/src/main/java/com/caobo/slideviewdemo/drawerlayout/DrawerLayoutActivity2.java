@@ -2,11 +2,9 @@ package com.caobo.slideviewdemo.drawerlayout;
 
 import com.caobo.slideviewdemo.BaseActivity;
 import com.caobo.slideviewdemo.R;
-import com.caobo.slideviewdemo.utils.StatusBarUtils;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.widget.Toolbar;
-import androidx.core.content.ContextCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import butterknife.BindView;
 
@@ -26,7 +24,6 @@ public class DrawerLayoutActivity2 extends BaseActivity {
 
     @Override
     protected void initView() {
-        StatusBarUtils.setColor(this, ContextCompat.getColor(this, R.color.colorPrimary));
         // 设置左上角图标["三" —— "←"]效果
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close);
         actionBarDrawerToggle.syncState();

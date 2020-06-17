@@ -9,12 +9,12 @@
     android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
-        app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
         app:layout_scrollFlags="scroll|enterAlways"
+        app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
         app:title="DrawerLayout"
         app:titleTextColor="#FFF"
         tools:ignore="MissingConstraints" />
@@ -64,7 +64,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:gravity="center"
+        android:onClick="onDrawerLayoutClick5"
+        android:text="DrawerLayout + NavigationView 仿QQ侧滑菜单"
         android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
         android:textSize="14dp" />
 
 

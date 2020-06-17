@@ -33,6 +33,7 @@ public class DrawerLayoutActivity extends BaseActivity {
     public void onDrawerLayoutClick4(View view) {
         startActivity(DrawerLayoutActivity4.class);
     }
-
-
+    public void onDrawerLayoutClick5(View view) {
+        startActivity(DrawerLayoutActivity5.class);
+    }
 }

@@ -24,6 +24,8 @@ public abstract class BaseActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         StatusBarUtils.setColor(this, ContextCompat.getColor(this, R.color.colorPrimary));
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+
         initView();
     }
 

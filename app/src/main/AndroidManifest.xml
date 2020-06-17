@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".drawerlayout.DrawerLayoutActivity">
+        <activity android:name=".toolbar.SearchViewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,10 +21,12 @@
         <activity android:name=".tablayout.TabLayoutActivity" />
         <activity android:name=".snackbar.SnackBarActivity" />
         <activity android:name=".textinputlayout.TextInputLayoutActivity" />
+        <activity android:name=".drawerlayout.DrawerLayoutActivity" />
         <activity android:name=".drawerlayout.DrawerLayoutActivity1" />
         <activity android:name=".drawerlayout.DrawerLayoutActivity2" />
         <activity android:name=".drawerlayout.DrawerLayoutActivity3" />
         <activity android:name=".drawerlayout.DrawerLayoutActivity4" />
+        <activity android:name=".drawerlayout.DrawerLayoutActivity5" />
     </application>
 
 </manifest>

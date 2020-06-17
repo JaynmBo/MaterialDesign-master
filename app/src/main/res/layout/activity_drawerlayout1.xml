@@ -18,7 +18,6 @@
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|enterAlways"
-            app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
             app:title="DrawerLayout"
             app:titleTextColor="#FFF"
             tools:ignore="MissingConstraints" />
