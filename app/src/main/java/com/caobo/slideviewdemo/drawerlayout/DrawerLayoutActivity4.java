@@ -45,6 +45,7 @@ public class DrawerLayoutActivity4 extends BaseActivity {
         drawerLayout.addDrawerListener(new DrawerLayout.DrawerListener() {
             @Override
             public void onDrawerSlide(@NonNull View drawerView, float slideOffset) {
+                // 抽屉状态发生变化时调用
                 // 主页内容
                 View contentView = drawerLayout.getChildAt(0);
                 // 侧边栏
