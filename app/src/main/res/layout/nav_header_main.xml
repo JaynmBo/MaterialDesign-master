@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="?attr/colorPrimary"
+    android:gravity="bottom"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <com.caobo.slideviewdemo.drawerlayout.MovingImageView
+        android:id="@+id/movingImageView"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/menu_header_background"
+        app:miv_load_on_create="false"
+        app:miv_max_relative_size="3.0"
+        app:miv_min_relative_offset="0.2"
+        app:miv_repetitions="-1"
+        app:miv_speed="100"
+        app:miv_start_delay="100" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="30dp"
+        android:paddingTop="16dp"
+        android:src="@mipmap/header_icon"
+        app:civ_border_color="@color/colorWhite"
+        app:civ_border_width="2dp" />
+
+    <TextView
+        android:id="@+id/tv_nick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="16dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:text="Learn and live."
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp" />
+</FrameLayout>

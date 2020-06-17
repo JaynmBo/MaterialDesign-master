@@ -2,11 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
+        app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
@@ -16,23 +19,53 @@
         app:titleTextColor="#FFF"
         tools:ignore="MissingConstraints" />
 
-    <androidx.drawerlayout.widget.DrawerLayout
-        android:id="@+id/drawerLayout"
+    <Button
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:onClick="onDrawerLayoutClick1"
+        android:text="DrawerLayout 基础使用"
+        android:textAllCaps="false"
+        android:textSize="14dp" />
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@mipmap/meizi_2" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:onClick="onDrawerLayoutClick2"
+        android:text="DrawerLayout + ToolBar 使用"
+        android:textAllCaps="false"
+        android:textSize="14dp" />
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@mipmap/pangzi" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:onClick="onDrawerLayoutClick3"
+        android:text="DrawerLayout + NavigationView + ToolBar 使用"
+        android:textAllCaps="false"
+        android:textSize="14dp" />
 
-    </androidx.drawerlayout.widget.DrawerLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:onClick="onDrawerLayoutClick4"
+        android:text="DrawerLayout + NavigationView + ToolBar 沉浸式使用"
+        android:textAllCaps="false"
+        android:textSize="14dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:textSize="14dp" />
+
 
 </LinearLayout>

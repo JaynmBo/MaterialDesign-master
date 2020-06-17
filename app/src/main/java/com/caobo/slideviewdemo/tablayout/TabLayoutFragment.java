@@ -15,8 +15,6 @@ import androidx.fragment.app.Fragment;
  */
 class TabLayoutFragment extends Fragment {
 
-
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

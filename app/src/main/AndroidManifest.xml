@@ -21,6 +21,10 @@
         <activity android:name=".tablayout.TabLayoutActivity" />
         <activity android:name=".snackbar.SnackBarActivity" />
         <activity android:name=".textinputlayout.TextInputLayoutActivity" />
+        <activity android:name=".drawerlayout.DrawerLayoutActivity1" />
+        <activity android:name=".drawerlayout.DrawerLayoutActivity2" />
+        <activity android:name=".drawerlayout.DrawerLayoutActivity3" />
+        <activity android:name=".drawerlayout.DrawerLayoutActivity4" />
     </application>
 
 </manifest>
