@@ -18,6 +18,10 @@
 
     <style name="AppThemeLight" parent="BaseAppThemeLight">
         <item name="themeColor">@color/colorPrimary</item>
+        <!-- 溢出菜单文字颜色-->
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <!-- 溢出菜单图标颜色-->
+        <item name="colorControlNormal">@android:color/white</item>
     </style>
 
     <style name="AppThemeLight.NoTranslucent" parent="BaseAppThemeLight">
