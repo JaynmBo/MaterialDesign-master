@@ -1,4 +1,4 @@
-package com.caobo.slideviewdemo.toolbar;
+package com.caobo.slideviewdemo.searchview;
 
 import android.database.Cursor;
 import android.os.Bundle;
@@ -35,7 +35,7 @@ public class SearchViewActivity extends BaseActivity {
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;
-    @BindView(R.id.recyclerView)
+    @BindView(R.id.listView)
     ListView listView;
     SearchView mSearchView;
     SearchView.SearchAutoComplete mSearchEditView;
@@ -101,10 +101,9 @@ public class SearchViewActivity extends BaseActivity {
         mSearchEditView.setHintTextColor(getResources().getColor(R.color.selectable_item_background_general_light_accent));
         mSearchEditView.setTextColor(getResources().getColor(R.color.text_color_dark));
         mSearchEditView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 15);
-        // 设置搜索框背景样式
+//        // 设置搜索框背景样式
         mSearchEditView.setBackground(getDrawable(R.drawable.shape_toolbar));
-
-        // 去掉搜索框默认的下划线
+//        // 去掉搜索框默认的下划线
         search_plate = mSearchView.findViewById(R.id.search_plate);
         submit_area = mSearchView.findViewById(R.id.submit_area);
         search_plate.setBackground(null);
@@ -139,6 +138,12 @@ public class SearchViewActivity extends BaseActivity {
             @Override
             public boolean onQueryTextChange(String newText) {
                 // 文本搜索框发生变化时调用
+//                if(TextUtils.isEmpty(newText)){
+//                    listView.setVisibility(View.GONE);
+//                }else {
+//                    listView.setVisibility(View.VISIBLE);
+//                    setAdapter();
+//                }
                 setAdapter();
                 return false;
             }
@@ -150,19 +155,23 @@ public class SearchViewActivity extends BaseActivity {
     private void setAdapter() {
         Cursor cursor = getContentResolver().query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
                 null, null, null, null);
-        if (listView.getAdapter() != null) {
-            ((SimpleCursorAdapter) listView.getAdapter()).changeCursor(cursor);
-        } else {
-            SimpleCursorAdapter simpleAdapter = new SimpleCursorAdapter(SearchViewActivity.this,
-                    R.layout.searchview_item, cursor,
-                    new String[]{ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME},
-                    new int[]{R.id.name});
-            listView.setAdapter(simpleAdapter);
-        }
-//        // 设置SearchView 适配器
-//        mSearchView.setSuggestionsAdapter(simpleAdapter);
-//        //设置触发查询的最少字符数（默认2个字符才会触发查询）
-//        mSearchEditView.setThreshold(1);
+//        if (listView.getAdapter() != null) {
+//            ((SimpleCursorAdapter) listView.getAdapter()).changeCursor(cursor);
+//        } else {
+//            SimpleCursorAdapter simpleAdapter = new SimpleCursorAdapter(SearchViewActivity.this,
+//                    R.layout.searchview_item, cursor,
+//                    new String[]{ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME},
+//                    new int[]{R.id.name});
+//            listView.setAdapter(simpleAdapter);
+//        }
+        SimpleCursorAdapter simpleAdapter = new SimpleCursorAdapter(SearchViewActivity.this,
+                R.layout.searchview_item, cursor,
+                new String[]{ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME},
+                new int[]{R.id.name});
+        // 设置SearchView 适配器
+        mSearchView.setSuggestionsAdapter(simpleAdapter);
+        //设置触发查询的最少字符数（默认2个字符才会触发查询）
+        mSearchEditView.setThreshold(1);
     }
 
 

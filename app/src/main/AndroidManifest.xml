@@ -29,7 +29,7 @@
         <activity android:name=".drawerlayout.DrawerLayoutActivity3" />
         <activity android:name=".drawerlayout.DrawerLayoutActivity4" />
         <activity android:name=".drawerlayout.DrawerLayoutActivity5" />
-        <activity android:name=".toolbar.SearchViewActivity" />
+        <activity android:name=".searchview.SearchViewActivity" />
     </application>
 
 </manifest>

@@ -1,31 +1,28 @@
 package com.caobo.slideviewdemo.toolbar;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.caobo.slideviewdemo.BaseActivity;
 import com.caobo.slideviewdemo.R;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import butterknife.BindView;
 
 /**
  * Created by cb
  * on 2020-06-10.
  */
-public class ToolBarActivity extends AppCompatActivity {
+public class ToolBarActivity extends BaseActivity {
 
-    private Toolbar toolbar;
+    @BindView(R.id.toolbar)
+      Toolbar toolbar;
+
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_toolbar);
-        toolbar = findViewById(R.id.toolbar);
-
+    protected void initView() {
         // 设置ToolBar标题
         toolbar.setTitle("ToolBar");
         // 设置ToolBar副标题
@@ -66,7 +63,11 @@ public class ToolBarActivity extends AppCompatActivity {
                 return false;
             }
         });
+    }
 
+    @Override
+    protected int getLayoutResID() {
+        return R.layout.activity_toolbar;
     }
 
     public void caseOnclick(View view) {

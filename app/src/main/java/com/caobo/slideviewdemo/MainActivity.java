@@ -9,7 +9,7 @@ import com.caobo.slideviewdemo.drawerlayout.DrawerLayoutActivity;
 import com.caobo.slideviewdemo.snackbar.SnackBarActivity;
 import com.caobo.slideviewdemo.tablayout.TabLayoutActivity;
 import com.caobo.slideviewdemo.textinputlayout.TextInputLayoutActivity;
-import com.caobo.slideviewdemo.toolbar.SearchViewActivity;
+import com.caobo.slideviewdemo.searchview.SearchViewActivity;
 import com.caobo.slideviewdemo.toolbar.ToolBarActivity;
 
 import androidx.core.app.ActivityCompat;

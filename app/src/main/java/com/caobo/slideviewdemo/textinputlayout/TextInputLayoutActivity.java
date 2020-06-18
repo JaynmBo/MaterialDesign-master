@@ -1,29 +1,26 @@
 package com.caobo.slideviewdemo.textinputlayout;
 
-import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 
+import com.caobo.slideviewdemo.BaseActivity;
 import com.caobo.slideviewdemo.R;
 import com.google.android.material.textfield.TextInputLayout;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
+import butterknife.BindView;
 
 /**
  * Created by cb
  * on 2020-06-15.
  */
-public class TextInputLayoutActivity extends AppCompatActivity {
+public class TextInputLayoutActivity extends BaseActivity {
 
-    private TextInputLayout userInputLayout;
+    @BindView(R.id.userInputLayout)
+    TextInputLayout userInputLayout;
+
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_inputlayout);
-
-        userInputLayout = findViewById(R.id.userInputLayout);
+    protected void initView() {
 
         // 开启错误提示
         userInputLayout.setErrorEnabled(true);
@@ -48,12 +45,17 @@ public class TextInputLayoutActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable s) {
                 // 文本发生变化后调用
-                if(userInputLayout.getEditText().getText().toString().trim().length()>10){
+                if (userInputLayout.getEditText().getText().toString().trim().length() > 10) {
                     userInputLayout.setError("用户名长度超出限制");
-                }else{
+                } else {
                     userInputLayout.setError(null);
                 }
             }
         });
+    }
+
+    @Override
+    protected int getLayoutResID() {
+        return R.layout.activity_inputlayout;
     }
 }

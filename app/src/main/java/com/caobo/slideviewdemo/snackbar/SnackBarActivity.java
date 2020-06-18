@@ -1,31 +1,29 @@
 package com.caobo.slideviewdemo.snackbar;
 
 import android.graphics.Color;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.caobo.slideviewdemo.BaseActivity;
 import com.caobo.slideviewdemo.R;
 import com.google.android.material.snackbar.Snackbar;
-
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
 
 /**
  * Created by cb
  * on 2020-06-15.
  */
-public class SnackBarActivity extends AppCompatActivity {
+public class SnackBarActivity extends BaseActivity {
 
-    private CoordinatorLayout coordinator;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_snackbar);
-        coordinator = findViewById(R.id.coordinator);
+    protected void initView() {
+
+    }
+
+    @Override
+    protected int getLayoutResID() {
+        return R.layout.activity_snackbar;
     }
 
     /**
@@ -110,8 +108,4 @@ public class SnackBarActivity extends AppCompatActivity {
                 .show();
     }
 
-
-    public void onCoordinatorClick(View view) {
-        Snackbar.make(coordinator, "提示：您有新消息", Snackbar.LENGTH_SHORT).show();
-    }
 }

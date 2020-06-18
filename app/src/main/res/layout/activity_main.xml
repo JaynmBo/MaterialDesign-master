@@ -5,9 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.Toolbar
+        app:title="Android Material Design"
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
@@ -74,16 +76,6 @@
         android:layout_gravity="center_vertical"
         android:gravity="center"
         android:onClick="coordinatorClick"
-        android:text="CoordinatorLayout"
-        android:textAllCaps="false"
-        android:textSize="14dp" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:gravity="center"
-        android:onClick="toolbarClick"
         android:text="CoordinatorLayout"
         android:textAllCaps="false"
         android:textSize="14dp" />
