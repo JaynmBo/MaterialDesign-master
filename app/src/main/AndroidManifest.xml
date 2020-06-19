@@ -30,6 +30,7 @@
         <activity android:name=".drawerlayout.DrawerLayoutActivity4" />
         <activity android:name=".drawerlayout.DrawerLayoutActivity5" />
         <activity android:name=".searchview.SearchViewActivity" />
+        <activity android:name=".cardview.CardViewActivity" />
     </application>
 
 </manifest>

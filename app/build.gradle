@@ -40,4 +40,8 @@ dependencies {
 
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
+
+
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.22'
+
 }

@@ -2,15 +2,18 @@ package com.caobo.slideviewdemo;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.caobo.slideviewdemo.cardview.CardViewActivity;
 import com.caobo.slideviewdemo.drawerlayout.DrawerLayoutActivity;
+import com.caobo.slideviewdemo.searchview.SearchViewActivity;
 import com.caobo.slideviewdemo.snackbar.SnackBarActivity;
 import com.caobo.slideviewdemo.tablayout.TabLayoutActivity;
 import com.caobo.slideviewdemo.textinputlayout.TextInputLayoutActivity;
-import com.caobo.slideviewdemo.searchview.SearchViewActivity;
 import com.caobo.slideviewdemo.toolbar.ToolBarActivity;
+import com.caobo.slideviewdemo.utils.StatusBarUtils;
 
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -20,6 +23,9 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initView() {
+
+        int statusBarHeight = StatusBarUtils.getStatusBarHeight(this);
+        Log.e("TAG", "initView: statusBarHeight : "+statusBarHeight );
     }
 
     @Override
@@ -75,5 +81,9 @@ public class MainActivity extends BaseActivity {
                 break;
             default:
         }
+    }
+
+    public void cardViewClick(View view) {
+        startActivity(CardViewActivity.class);
     }
 }

@@ -14,7 +14,7 @@ import butterknife.ButterKnife;
  * Created by cb
  * on 2020-06-12.
  */
-abstract class LazyFragment extends Fragment {
+public abstract class LazyFragment extends Fragment {
     public View rootView;
 
     public Activity mContext;

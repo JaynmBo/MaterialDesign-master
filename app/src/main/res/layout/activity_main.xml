@@ -90,5 +90,14 @@
         android:text="SearchView"
         android:textAllCaps="false"
         android:textSize="14dp" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:onClick="cardViewClick"
+        android:text="CardView"
+        android:textAllCaps="false"
+        android:textSize="14dp" />
 
 </LinearLayout>
