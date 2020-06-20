@@ -1,12 +1,7 @@
 package com.caobo.slideviewdemo.cardview;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.TextView;
-
 import com.caobo.slideviewdemo.BaseActivity;
 import com.caobo.slideviewdemo.R;
-import com.caobo.slideviewdemo.tablayout.MyFragment2;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
@@ -26,15 +21,11 @@ import butterknife.BindView;
  */
 public class CardViewActivity extends BaseActivity {
     private List<Fragment> fragments = new ArrayList<>();
-
     @BindView(R.id.tabLayout)
     TabLayout tabLayout;
-
     @BindView(R.id.viewPage)
     ViewPager viewPage;
-
     private String mTitles[] = {"TAB 0", "TAB 1", "TAB 2"};
-
 
     @Override
     protected void initView() {
@@ -49,24 +40,14 @@ public class CardViewActivity extends BaseActivity {
         for (String mTitle : mTitles) {
             tabLayout.addTab(tabLayout.newTab().setText(mTitle));
         }
-        for (int i = 0; i < mTitles.length; i++) {
-            fragments.add(MyFragment2.newInstance(i));
-        }
+        fragments.add(CardImageFragment.newInstance());
+        fragments.add(CardTextFragment.newInstance());
+        fragments.add(CardBelleFragment.newInstance());
 
         viewPage.setAdapter(new FragmentAdapter(getSupportFragmentManager(), tabLayout.getTabCount()));
         // 设置ViewPager默认显示index
         viewPage.setCurrentItem(0);
 
-
-        // 调用系统API设置ICON
-        for (int i = 0; i < mTitles.length; i++) {
-            tabLayout.getTabAt(i).setIcon(getResources().getDrawable(R.drawable.ic_baseline_account_balance_24));
-        }
-
-        // 自定义Tab文本和ICON
-//        for (int i = 0; i < mTitles.length; i++) {
-//            tabLayout.getTabAt(i).setCustomView(setCustomTab(i));
-//        }
     }
 
     @Override
@@ -99,17 +80,4 @@ public class CardViewActivity extends BaseActivity {
         }
     }
 
-
-    /**
-     * 自定义Tab View
-     *
-     * @param i
-     * @return
-     */
-    private View setCustomTab(int i) {
-        View view = LayoutInflater.from(this).inflate(R.layout.tab_item, null);
-        TextView textView = view.findViewById(R.id.title);
-        textView.setText(mTitles[i]);
-        return view;
-    }
 }

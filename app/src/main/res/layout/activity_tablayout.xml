@@ -6,10 +6,10 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:orientation="vertical">
-    
+
 
     <androidx.appcompat.widget.Toolbar
-        app:title="TabLayout"
+        app:title="CardView"
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
