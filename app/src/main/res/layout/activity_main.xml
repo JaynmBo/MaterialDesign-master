@@ -99,5 +99,14 @@
         android:text="CardView"
         android:textAllCaps="false"
         android:textSize="14dp" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:onClick="paletteClick"
+        android:text="Palette"
+        android:textAllCaps="false"
+        android:textSize="14dp" />
 
 </LinearLayout>

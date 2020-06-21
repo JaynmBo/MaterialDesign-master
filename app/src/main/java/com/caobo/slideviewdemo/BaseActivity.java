@@ -3,11 +3,13 @@ package com.caobo.slideviewdemo;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.view.View;
 
 import com.caobo.slideviewdemo.utils.StatusBarUtils;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 import butterknife.ButterKnife;
 
@@ -26,7 +28,19 @@ public abstract class BaseActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
 
+
+
         initView();
+    }
+
+    protected void setToolBarCallBack(Toolbar toolbar){
+        // 设置Navigation Button监听
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     protected abstract void initView();

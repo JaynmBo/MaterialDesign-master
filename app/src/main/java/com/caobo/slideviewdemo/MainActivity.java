@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 import com.caobo.slideviewdemo.cardview.CardViewActivity;
 import com.caobo.slideviewdemo.drawerlayout.DrawerLayoutActivity;
+import com.caobo.slideviewdemo.palette.PaletteActivity;
 import com.caobo.slideviewdemo.searchview.SearchViewActivity;
 import com.caobo.slideviewdemo.snackbar.SnackBarActivity;
 import com.caobo.slideviewdemo.tablayout.TabLayoutActivity;
@@ -85,5 +86,9 @@ public class MainActivity extends BaseActivity {
 
     public void cardViewClick(View view) {
         startActivity(CardViewActivity.class);
+    }
+
+    public void paletteClick(View view) {
+        startActivity(PaletteActivity.class);
     }
 }

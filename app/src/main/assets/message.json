@@ -1,10 +1,5 @@
 [
   {
-    "title": "Candy Shop",
-    "author": "Mohamed Chahin",
-    "imageUrl": "https://resources.ninghao.org/images/candy-shop.jpg"
-  },
-  {
     "title": "Childhood in a picture",
     "author": "Mohamed Chahin",
     "imageUrl": "https://resources.ninghao.org/images/childhood-in-a-picture.jpg"
@@ -23,6 +18,11 @@
     "title": "Free Hugs",
     "author": "Mohamed Chahin",
     "imageUrl": "https://resources.ninghao.org/images/free_hugs.jpg"
+  },
+  {
+    "title": "Candy Shop",
+    "author": "Mohamed Chahin",
+    "imageUrl": "https://resources.ninghao.org/images/candy-shop.jpg"
   },
   {
     "title": "Gravity Falls",
@@ -73,5 +73,5 @@
     "title": "White Dragon",
     "author": "Mohamed Chahin",
     "imageUrl": "https://resources.ninghao.org/images/white-dragon.jpg"
-  }  
+  }
 ]

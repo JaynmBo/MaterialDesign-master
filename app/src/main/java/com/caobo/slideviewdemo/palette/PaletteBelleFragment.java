@@ -1,6 +1,5 @@
-package com.caobo.slideviewdemo.cardview;
+package com.caobo.slideviewdemo.palette;
 
-import android.os.Bundle;
 import android.view.View;
 
 import com.caobo.slideviewdemo.R;
@@ -16,37 +15,29 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 import butterknife.BindView;
 
 /**
- * Created by Administrator on 2020/6/20 0020
+ * Created by Administrator on 2020/6/21 0021
  * Describe:
  **/
-public class CardBelleFragment extends LazyFragment {
+public class PaletteBelleFragment extends LazyFragment {
 
-    CardBelleAdapter cardBelleAdapter;
 
     @BindView(R.id.recyclerView)
     RecyclerView recyclerView;
 
-    public static CardBelleFragment newInstance() {
-        Bundle args = new Bundle();
-        CardBelleFragment fragment = new CardBelleFragment();
-        fragment.setArguments(args);
-        return fragment;
-    }
+    PaletteBelleAdapter belleAdapter;
 
     @Override
     protected void initView(View rootView) {
-
         String json = AssetsUtils.getJson("belle.json", getActivity());
         List<String> belles = new Gson().fromJson(json, new TypeToken<List<String>>() {
         }.getType());
-
         recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
-        cardBelleAdapter = new CardBelleAdapter(R.layout.fragment_tab_belle_item, belles);
-        cardBelleAdapter.bindToRecyclerView(recyclerView);
+        belleAdapter = new PaletteBelleAdapter(R.layout.fragment_palette_belle_item, belles);
+        belleAdapter.bindToRecyclerView(recyclerView);
     }
 
     @Override
     protected int getLayoutId() {
-        return R.layout.fragment_cardbelle_layout;
+        return R.layout.fragment_palette;
     }
 }

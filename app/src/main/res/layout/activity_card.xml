@@ -8,46 +8,13 @@
     android:orientation="vertical">
 
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:clickable="true"
-        android:foreground="?android:attr/selectableItemBackground"
-        app:cardCornerRadius="5dp"
-        app:cardElevation="10dp"
-        app:cardUseCompatPadding="false">
 
-        <ImageView
-            android:scaleType="centerCrop"
-            android:src="@mipmap/childhood_in"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="标准教程"
-            android:textColor="@color/text_color_dark"
-            android:textSize="20dp" />
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:clickable="true"
-        android:foreground="?android:attr/selectableItemBackground"
-        app:cardCornerRadius="5dp"
-        app:cardElevation="10dp"
-        app:cardUseCompatPadding="true">
-
-        <ImageView
-            android:scaleType="centerCrop"
-            android:src="@mipmap/childhood_in"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="标准教程"
-            android:textColor="@color/text_color_dark"
-            android:textSize="20dp" />
-
-    </androidx.cardview.widget.CardView>
-
+    <androidx.appcompat.widget.SwitchCompat
+        android:textOff="关"
+        android:textOn="开"
+        app:showText="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
 
 </LinearLayout>
