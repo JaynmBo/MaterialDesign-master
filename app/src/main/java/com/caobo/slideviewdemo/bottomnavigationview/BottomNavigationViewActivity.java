@@ -45,6 +45,7 @@ public class BottomNavigationViewActivity extends BaseActivity {
             fragments.add(NavigationViewFragment.newInstance(i));
         }
         setToolBarTitle(currentTitleIndex);
+        // 设置Tab大于3个时的动画
         bottomNavigationView.setLabelVisibilityMode(LabelVisibilityMode.LABEL_VISIBILITY_LABELED);
         bottomNavigationView.setItemHorizontalTranslationEnabled(false);
         viewPager.setOffscreenPageLimit(4);
