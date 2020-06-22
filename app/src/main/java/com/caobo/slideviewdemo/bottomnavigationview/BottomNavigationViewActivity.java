@@ -40,6 +40,8 @@ public class BottomNavigationViewActivity extends BaseActivity {
 
     @Override
     protected void initView() {
+
+
         setToolBarCallBack(toolbar);
         for (int i = 0; i < bottomNavigationView.getMaxItemCount(); i++) {
             fragments.add(NavigationViewFragment.newInstance(i));
