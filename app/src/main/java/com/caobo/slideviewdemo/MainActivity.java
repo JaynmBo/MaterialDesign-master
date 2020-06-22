@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.caobo.slideviewdemo.bottomnavigationview.BottomNavigationViewActivity;
 import com.caobo.slideviewdemo.cardview.CardViewActivity;
 import com.caobo.slideviewdemo.drawerlayout.DrawerLayoutActivity;
 import com.caobo.slideviewdemo.palette.PaletteActivity;
@@ -90,5 +91,9 @@ public class MainActivity extends BaseActivity {
 
     public void paletteClick(View view) {
         startActivity(PaletteActivity.class);
+    }
+
+    public void bottomNavClick(View view) {
+        startActivity(BottomNavigationViewActivity.class);
     }
 }

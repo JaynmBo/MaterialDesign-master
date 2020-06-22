@@ -26,14 +26,11 @@ public abstract class BaseActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         StatusBarUtils.setColor(this, ContextCompat.getColor(this, R.color.colorPrimary));
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-
-
-
-
         initView();
     }
 
-    protected void setToolBarCallBack(Toolbar toolbar){
+    protected void setToolBarCallBack(Toolbar toolbar) {
+        toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_baseline_arrow_back_24, null));
         // 设置Navigation Button监听
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

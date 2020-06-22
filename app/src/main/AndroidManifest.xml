@@ -33,6 +33,7 @@
         <activity android:name=".searchview.SearchViewActivity" />
         <activity android:name=".cardview.CardViewActivity" />
         <activity android:name=".palette.PaletteActivity" />
+        <activity android:name=".bottomnavigationview.BottomNavigationViewActivity" />
     </application>
 
 </manifest>
