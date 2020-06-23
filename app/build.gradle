@@ -48,4 +48,7 @@ dependencies {
 
     implementation 'androidx.palette:palette:1.0.0'
 
+    implementation 'q.rorbin:badgeview:1.1.3'
+
+
 }

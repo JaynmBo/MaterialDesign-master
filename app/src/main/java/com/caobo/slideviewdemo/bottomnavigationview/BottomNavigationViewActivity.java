@@ -27,31 +27,53 @@ public class BottomNavigationViewActivity extends BaseActivity {
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;
-
     @BindView(R.id.viewPages)
     ViewPager viewPager;
-
     @BindView(R.id.bottomNavigationView)
     BottomNavigationView bottomNavigationView;
-
+    // Fragment 集合
     private List<Fragment> fragments = new ArrayList<>();
-
+    // 记录Tab索引，更新Toolbar标题
     private int currentTitleIndex = 0;
 
     @Override
     protected void initView() {
-
-
         setToolBarCallBack(toolbar);
-        for (int i = 0; i < bottomNavigationView.getMaxItemCount(); i++) {
+        // 添加Fragment
+        fragments.add(BottomNavViewDemoFragment.newInstance());
+        for (int i = 0; i < bottomNavigationView.getMaxItemCount() - 1; i++) {
             fragments.add(NavigationViewFragment.newInstance(i));
         }
+        // 初始化ToolBar标题栏
         setToolBarTitle(currentTitleIndex);
         // 设置Tab大于3个时的动画
         bottomNavigationView.setLabelVisibilityMode(LabelVisibilityMode.LABEL_VISIBILITY_LABELED);
-        bottomNavigationView.setItemHorizontalTranslationEnabled(false);
+        // 设置ViewPager加载数量
         viewPager.setOffscreenPageLimit(4);
         viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager(), bottomNavigationView.getMaxItemCount()));
+        setNavigationListener();
+        setViewPagerListener();
+    }
+
+    private void setViewPagerListener() {
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                bottomNavigationView.getMenu().getItem(position).setChecked(true);
+                setToolBarTitle(position);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+            }
+        });
+    }
+
+    private void setNavigationListener() {
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
@@ -80,24 +102,13 @@ public class BottomNavigationViewActivity extends BaseActivity {
                 return true;
             }
         });
-        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-                bottomNavigationView.getMenu().getItem(position).setChecked(true);
-                setToolBarTitle(position);
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
-            }
-        });
     }
 
+    /**
+     * 更新Toolbar标题
+     *
+     * @param currentTitleIndex
+     */
     private void setToolBarTitle(int currentTitleIndex) {
         toolbar.setTitle(bottomNavigationView.getMenu().getItem(currentTitleIndex).getTitle());
     }

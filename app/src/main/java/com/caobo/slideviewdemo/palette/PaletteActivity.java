@@ -25,10 +25,8 @@ public class PaletteActivity extends BaseActivity {
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;
-
     @BindView(R.id.tabLayout)
     TabLayout tabLayout;
-
     @BindView(R.id.viewPage)
     ViewPager viewPager;
 

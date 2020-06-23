@@ -3,13 +3,44 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical">
 
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNav1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/white"
         app:menu="@menu/activity_bottom_nav" />
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@color/white"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/activity_bottom_nav" />
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@color/light_yellow"
+        app:itemIconTint="@color/selector_nav_text_item"
+        app:itemTextColor="@color/selector_nav_text_item"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/activity_bottom_nav" />
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@color/white"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/activity_bottom_nav" />
 
 </LinearLayout>

@@ -22,17 +22,8 @@ import androidx.palette.graphics.Palette;
  */
 public class PaletteImageAdapter extends BaseCompatAdapter<ArticleBean, BaseViewHolder> {
 
-
     public PaletteImageAdapter(int layoutResId, List<ArticleBean> data) {
         super(layoutResId, data);
-    }
-
-    public PaletteImageAdapter(List<ArticleBean> data) {
-        super(data);
-    }
-
-    public PaletteImageAdapter(int layoutResId) {
-        super(layoutResId);
     }
 
     @Override
@@ -49,7 +40,6 @@ public class PaletteImageAdapter extends BaseCompatAdapter<ArticleBean, BaseView
                 e.printStackTrace();
             }
         }).start();
-
     }
 
     private void setPalette(Bitmap bitmap, BaseViewHolder helper, ArticleBean item) {
@@ -77,10 +67,13 @@ public class PaletteImageAdapter extends BaseCompatAdapter<ArticleBean, BaseView
                 ((ImageView) helper.getView(R.id.articleListImg)).setImageBitmap(bitmap);
             }
         });
-
     }
 
-
+    /**
+     * @param percent 透明度
+     * @param rgb     RGB值
+     * @return
+     */
     protected int getTranslucentColor(float percent, int rgb) {
         int blue = Color.blue(rgb);
         int green = Color.green(rgb);

@@ -37,21 +37,6 @@ public class PaletteDemoFragment extends LazyFragment {
 
     @Override
     protected void initView(View rootView) {
-        /**
-         // 获取到柔和的深色的颜色（可传默认值）
-         palette.getDarkMutedColor(Color.BLUE);
-         // 获取到活跃的深色的颜色（可传默认值）
-         palette.getDarkVibrantColor(Color.BLUE);
-         // 获取到柔和的明亮的颜色（可传默认值）
-         palette.getLightMutedColor(Color.BLUE);
-         // 获取到活跃的明亮的颜色（可传默认值）
-         palette.getLightVibrantColor(Color.BLUE);
-         // 获取图片中最活跃的颜色（也可以说整个图片出现最多的颜色）（可传默认值）
-         palette.getVibrantColor(Color.BLUE);
-         // 获取图片中一个最柔和的颜色（可传默认值）
-         palette.getMutedColor(Color.BLUE);
-         // ...  这里省略其他的方法。
-         */
         Bitmap bitmap = ((BitmapDrawable) imageView.getDrawable()).getBitmap();
         Palette.from(bitmap).generate(new Palette.PaletteAsyncListener() {
             @Override
