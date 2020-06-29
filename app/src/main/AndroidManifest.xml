@@ -34,6 +34,8 @@
         <activity android:name=".cardview.CardViewActivity" />
         <activity android:name=".palette.PaletteActivity" />
         <activity android:name=".bottomnavigationview.BottomNavigationViewActivity" />
+        <activity android:name=".coordinatorLayout.CoordinatorBehaviorActivity" />
+        <activity android:name=".coordinatorLayout.CoordinatorLayoutActivity" />
     </application>
 
 </manifest>

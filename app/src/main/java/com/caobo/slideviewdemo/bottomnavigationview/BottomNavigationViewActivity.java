@@ -38,7 +38,7 @@ public class BottomNavigationViewActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-        setToolBarCallBack(toolbar);
+        setToolBarCallBack();
         // 添加Fragment
         fragments.add(BottomNavViewDemoFragment.newInstance());
         for (int i = 0; i < bottomNavigationView.getMaxItemCount() - 1; i++) {

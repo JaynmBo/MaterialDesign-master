@@ -19,18 +19,25 @@ import butterknife.ButterKnife;
  **/
 public abstract class BaseActivity extends AppCompatActivity {
 
+    private Toolbar toolbar;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutResID());
+        toolbar = findViewById(R.id.toolbar);
         ButterKnife.bind(this);
         StatusBarUtils.setColor(this, ContextCompat.getColor(this, R.color.colorPrimary));
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         initView();
     }
 
-    protected void setToolBarCallBack(Toolbar toolbar) {
-        toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_baseline_arrow_back_24, null));
+    protected void setToolbarTitle(String toolbarTitle){
+        toolbar.setTitle(toolbarTitle);
+    }
+
+    protected void setToolBarCallBack() {
+        toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.abc_vector_test, null));
         // 设置Navigation Button监听
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

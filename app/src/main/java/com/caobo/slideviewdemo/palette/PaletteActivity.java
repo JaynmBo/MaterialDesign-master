@@ -36,7 +36,7 @@ public class PaletteActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-        setToolBarCallBack(toolbar);
+        setToolBarCallBack();
         tabLayout.setTabTextColors(Color.GRAY, Color.BLACK);
         for (String tab : tabs) {
             tabLayout.addTab(tabLayout.newTab().setText(tab));

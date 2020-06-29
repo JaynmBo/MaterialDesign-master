@@ -1,20 +1,30 @@
 package com.caobo.slideviewdemo.coordinatorLayout;
 
-import android.os.Bundle;
+import android.view.View;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
+import com.caobo.slideviewdemo.BaseActivity;
+import com.caobo.slideviewdemo.R;
 
 /**
  * Created by cb
  * on 2020-06-10.
  */
-public class CoordinatorLayoutActivity extends AppCompatActivity {
+public class CoordinatorLayoutActivity extends BaseActivity {
+
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    protected void initView() {
+        setToolbarTitle("CoordinatorLayout");
+        setToolBarCallBack();
+    }
+
+    @Override
+    protected int getLayoutResID() {
+        return R.layout.activity_coordinatorlayout;
+    }
 
 
+    public void toolbarBehaviorClick(View view) {
+        startActivity(CoordinatorBehaviorActivity.class);
     }
 }
