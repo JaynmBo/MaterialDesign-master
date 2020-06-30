@@ -24,6 +24,7 @@
         tools:ignore="MissingConstraints" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:onClick="fabClick"
         app:layout_behavior=".coordinatorLayout.behavior.FabBehavior"
         app:rippleColor="@color/colorPrimaryDark"
         app:backgroundTint="@color/colorPrimary"

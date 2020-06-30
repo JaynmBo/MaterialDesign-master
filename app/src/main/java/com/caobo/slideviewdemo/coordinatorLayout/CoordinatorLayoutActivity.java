@@ -24,7 +24,19 @@ public class CoordinatorLayoutActivity extends BaseActivity {
     }
 
 
-    public void toolbarBehaviorClick(View view) {
+    public void fabBehaviorClick(View view) {
         startActivity(CoordinatorBehaviorActivity.class);
+    }
+    public void fabSnackBehaviorClick(View view) {
+        startActivity(SnackBarBehaviorActivity.class);
+    }
+    public void appBarLayoutBehaviorClick(View view) {
+        startActivity(AppBarBehaviorActivity.class);
+    }
+    public void coordinatorBehaviorClick(View view) {
+        startActivity(CoordinatorCardViewActivity.class);
+    }
+    public void collapsingClick(View view) {
+        startActivity(CollapsingToolbarLayoutActivity.class);
     }
 }

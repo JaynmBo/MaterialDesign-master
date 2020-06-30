@@ -50,6 +50,6 @@ public class CardImageFragment extends LazyFragment {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.fragment_cardview_layout;
+        return R.layout.fragment_cardview_behavior_layout;
     }
 }

@@ -47,6 +47,6 @@ public class CardBelleFragment extends LazyFragment {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.fragment_cardbelle_layout;
+        return R.layout.fragment_cardview_behavior_layout;
     }
 }

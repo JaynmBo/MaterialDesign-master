@@ -13,9 +13,9 @@ import butterknife.BindView;
 
 /**
  * Created by cb
- * on 2020-06-29.
+ * on 2020-06-30.
  */
-public class CoordinatorBehaviorActivity extends BaseActivity {
+public class AppBarBehaviorActivity extends BaseActivity {
 
     @BindView(R.id.recyclerView)
     RecyclerView recyclerView;
@@ -26,7 +26,7 @@ public class CoordinatorBehaviorActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-        setToolbarTitle("FloatingActionButton Behavior");
+        setToolbarTitle("AppBarLayout Behavior");
         setToolBarCallBack();
         for (int i = 1; i <= 100; i++) {
             stringList.add("ITEM " + i);
@@ -39,6 +39,6 @@ public class CoordinatorBehaviorActivity extends BaseActivity {
 
     @Override
     protected int getLayoutResID() {
-        return R.layout.activity_fabbehavior_layout;
+        return R.layout.activity_appbarbehavior_layout;
     }
 }

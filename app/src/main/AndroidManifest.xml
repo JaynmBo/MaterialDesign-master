@@ -36,6 +36,10 @@
         <activity android:name=".bottomnavigationview.BottomNavigationViewActivity" />
         <activity android:name=".coordinatorLayout.CoordinatorBehaviorActivity" />
         <activity android:name=".coordinatorLayout.CoordinatorLayoutActivity" />
+        <activity android:name=".coordinatorLayout.SnackBarBehaviorActivity" />
+        <activity android:name=".coordinatorLayout.AppBarBehaviorActivity" />
+        <activity android:name=".coordinatorLayout.CoordinatorCardViewActivity" />
+        <activity android:name=".coordinatorLayout.CollapsingToolbarLayoutActivity" />
     </application>
 
 </manifest>
