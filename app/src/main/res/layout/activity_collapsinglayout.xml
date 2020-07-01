@@ -1,201 +1,263 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fitsSystemWindows="true">
-
+    android:layout_height="match_parent">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#F5F6FA"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:id="@+id/collapsingToolbarLayout"
             android:layout_width="match_parent"
-            android:layout_height="260dp"
-            app:contentScrim="#46a8ba"
-            app:expandedTitleMarginEnd="48dp"
-            app:expandedTitleMarginStart="48dp"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            android:layout_height="330dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:statusBarScrim="@android:color/transparent">
 
-            <LinearLayout
-                android:id="@+id/head_layout"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
+                android:layout_marginBottom="5dp"
+                android:background="@color/white"
+                android:paddingBottom="12dp"
                 app:layout_collapseMode="pin"
                 app:layout_collapseParallaxMultiplier="0.7">
 
-                <RelativeLayout
+                <ImageView
+                    android:id="@+id/topImage"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="50dp"
-                    android:padding="20dp">
+                    android:layout_height="150dp"
+                    android:fitsSystemWindows="true"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/user_profile_header"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_centerVertical="true"
-                        android:orientation="vertical">
+                <ImageView
+                    android:background="#40000000"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:fitsSystemWindows="true"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="涩郎"
-                            android:textColor="#ffffff"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/headImage"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="110dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/shape_icon_round"
+                    android:padding="3dp"
+                    android:src="@mipmap/head"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="3dp"
-                            android:text="Android开发工程师 @ 非著名程序员"
-                            android:textColor="#ffffff"
-                            android:textSize="13sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-
-                    <ImageView
-                        android:id="@+id/head_iv"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:scaleType="centerCrop" />
-                </RelativeLayout>
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:id="@+id/userName"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="40dp"
-                    android:ellipsize="end"
-                    android:maxLines="2"
-                    android:text="关注我（微博@涩郎，微信公众号：非著名程序员），我与你闲扯技术大话，笑谈科技人生。以幽默诙谐的态度，面对乏味无聊的技术，用扯淡的方式，分享技术的内涵。谈的是技术，更是我们的人生。"
-                    android:textColor="#ffffff"
-                    android:textSize="12sp" />
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="Jaynm"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/headImage"
+                    app:layout_constraintTop_toBottomOf="@+id/headImage" />
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:padding="20dp">
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/shape_live"
+                    android:gravity="center"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:text="Lv2"
+                    android:textColor="@color/white"
+                    android:textSize="10dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/userName"
+                    app:layout_constraintLeft_toRightOf="@+id/userName"
+                    app:layout_constraintTop_toTopOf="@+id/userName" />
 
-                    <LinearLayout
-                        android:id="@+id/one"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_centerVertical="true"
-                        android:orientation="vertical">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="分享"
-                            android:textColor="#ffffff"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/userDescribe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center"
+                    android:text="Android码农 @ 自由开发者"
+                    android:textColor="@color/txt_black"
+                    android:textSize="14dp"
+                    app:layout_constraintStart_toStartOf="@+id/userName"
+                    app:layout_constraintTop_toBottomOf="@+id/userName" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="50篇"
-                            android:textColor="#ffffff"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
+                <TextView
+                    android:id="@+id/userSignature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center"
+                    android:text="漫漫Android路，码农与你同在！"
+                    android:textColor="@color/txt_gray"
+                    android:textSize="14dp"
+                    app:layout_constraintStart_toStartOf="@+id/userDescribe"
+                    app:layout_constraintTop_toBottomOf="@+id/userDescribe" />
 
-                    <LinearLayout
-                        android:id="@+id/two"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_marginLeft="10dp"
-                        android:layout_toRightOf="@id/one"
-                        android:orientation="vertical">
+                <TextView
+                    android:id="@+id/attentionNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="7"
+                    android:textColor="@color/txt_black"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/userSignature"
+                    app:layout_constraintTop_toBottomOf="@+id/userSignature" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="获得收藏"
-                            android:textColor="#ffffff"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:text="关注"
+                    android:textColor="@color/txt_gray"
+                    android:textSize="14dp"
+                    app:layout_constraintStart_toStartOf="@+id/attentionNum"
+                    app:layout_constraintTop_toBottomOf="@+id/attentionNum" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="3000次"
-                            android:textColor="#ffffff"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
+                <TextView
+                    android:id="@+id/follower"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="102"
+                    android:textColor="@color/txt_black"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/userSignature"
+                    app:layout_constraintTop_toBottomOf="@+id/userSignature" />
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_marginLeft="10dp"
-                        android:layout_toRightOf="@id/two"
-                        android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:text="关注者"
+                    android:textColor="@color/txt_gray"
+                    android:textSize="14dp"
+                    app:layout_constraintStart_toStartOf="@+id/follower"
+                    app:layout_constraintTop_toBottomOf="@+id/follower" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="被阅读"
-                            android:textColor="#ffffff"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/relay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="1600dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="133"
+                    android:textColor="@color/txt_black"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/userSignature"
+                    app:layout_constraintTop_toBottomOf="@+id/userSignature" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="60000次"
-                            android:textColor="#ffffff"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:text="掘力值"
+                    android:textColor="@color/txt_gray"
+                    android:textSize="14dp"
+                    app:layout_constraintStart_toStartOf="@+id/relay"
+                    app:layout_constraintTop_toBottomOf="@+id/relay" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:paddingLeft="6dp"
-                        android:paddingTop="3dp"
-                        android:paddingRight="6dp"
-                        android:paddingBottom="3dp"
-                        android:text="设置"
-                        android:textColor="#ffffff"
-                        android:textSize="12sp" />
-                </RelativeLayout>
-            </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="25dp"
+                    android:background="@drawable/shape_leyar"
+                    android:gravity="center"
+                    android:paddingLeft="18dp"
+                    android:paddingTop="7dp"
+                    android:paddingRight="18dp"
+                    android:paddingBottom="7dp"
+                    android:text="关注"
+                    android:textColor="#0D7CEA"
+                    android:textSize="14dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/userName"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/userName" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="@color/colorPrimary"
+                android:background="@android:color/transparent"
                 app:layout_collapseMode="pin"
-                app:menu="@menu/menu_main"
+                app:menu="@menu/menu_user"
                 app:navigationIcon="@drawable/abc_vector_test"
-                app:titleTextColor="@color/white" />
+                app:popupTheme="@style/AppTheme.ToolbarPopupOverlay"
+                app:titleTextColor="@color/white">
+
+                <include layout="@layout/layout_user" />
+
+            </androidx.appcompat.widget.Toolbar>
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:fillViewport="false"
+            app:layout_scrollFlags="scroll"
+            app:tabIndicatorColor="#007FFF"
+            app:tabSelectedTextColor="@color/txt_black"
+            app:tabTextAppearance="@style/TabLayoutTextStyle"
+            app:tabTextColor="@color/drop_down_unselected" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
-
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

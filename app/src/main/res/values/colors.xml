@@ -6,6 +6,7 @@
     <color name="colorBlack">#000</color>
     <color name="colorLine">#AA9AE1</color>
     <color name="colorWhite">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
 
 
     <!-- 主题相关颜色 -->

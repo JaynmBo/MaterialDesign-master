@@ -77,6 +77,10 @@
     </style>
 
 
+    <style name="TabLayoutTextStyle">
+        <item name="android:textSize">16dp</item>
+    </style>
+
     <!-- red -->
     <style name="AppThemeLight.Red">
         <item name="themeColor">@color/md_red_500</item>

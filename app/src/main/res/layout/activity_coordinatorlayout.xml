@@ -2,12 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:fitsSystemWindows="true"
     android:orientation="vertical">
 
     <include layout="@layout/toolbar_layout" />
 
     <Button
+        android:textAllCaps="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
@@ -17,6 +19,7 @@
         android:textSize="14dp" />
 
     <Button
+        android:textAllCaps="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
@@ -26,6 +29,7 @@
         android:textSize="14dp" />
 
     <Button
+        android:textAllCaps="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
@@ -35,6 +39,7 @@
         android:textSize="14dp" />
 
     <Button
+        android:textAllCaps="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
@@ -49,7 +54,8 @@
         android:layout_gravity="center_vertical"
         android:gravity="center"
         android:onClick="collapsingClick"
-        android:text="Toolbar Behavior"
+        android:textAllCaps="false"
+        android:text="CollapsingToolbarLayout"
         android:textSize="14dp" />
 
 </LinearLayout>

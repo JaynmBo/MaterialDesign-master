@@ -1,7 +1,6 @@
 package com.caobo.slideviewdemo.tablayout;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,17 +46,10 @@ public class MyFragment2 extends Fragment {
     private void initView(View rootView) {
         tabIndex = getArguments().getInt("position");
         textView = rootView.findViewById(R.id.textView);
-        Log.e("TAG", "onFragmentLoad: 加载 : " + tabIndex);
     }
-
 
     private int tabIndex;
 
-    @Override
-    public void setUserVisibleHint(boolean isVisibleToUser) {
-        tabIndex = getArguments().getInt("position");
-        super.setUserVisibleHint(isVisibleToUser);
-    }
 
 
 }

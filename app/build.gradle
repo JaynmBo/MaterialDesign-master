@@ -33,7 +33,7 @@ dependencies {
 
     implementation 'com.android.support:design:29.0.0'
     implementation 'com.android.support:recyclerview-v7:29.0.0'
-
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.22'
 
     implementation 'com.jakewharton:butterknife:10.2.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
@@ -42,13 +42,15 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.6'
 
 
-    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.22'
-
+    // glide
     implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation 'jp.wasabeef:glide-transformations:4.1.0'
 
     implementation 'androidx.palette:palette:1.0.0'
-
+    // badgeView
     implementation 'q.rorbin:badgeview:1.1.3'
+
+
 
 
 }

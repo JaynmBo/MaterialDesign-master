@@ -41,6 +41,11 @@
         <item name="android:windowBackground">@mipmap/meizi_2</item>
     </style>
 
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+        <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+        <!--<item name="colorAccent">@color/colorAccent</item>-->
+    </style>
 
     <style name="net_error_img">
         <item name="android:layout_width">80dp</item>
