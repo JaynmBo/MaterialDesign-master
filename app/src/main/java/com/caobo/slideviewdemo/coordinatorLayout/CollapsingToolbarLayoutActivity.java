@@ -77,7 +77,7 @@ public class CollapsingToolbarLayoutActivity extends BaseActivity {
             public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
                 if (-verticalOffset >= appBarLayout.getTotalScrollRange() / 4) {
                     StatusBarUtils.setColor(CollapsingToolbarLayoutActivity.this, Color.argb(255, 1, 114, 229));
-                    toolbar.setBackgroundColor(Color.argb(255, 1, 128, 255));
+                    toolbar.setBackgroundColor(Color.argb(MAX_ALPHA, 1, 128, 255));
                     userLayout.setVisibility(View.VISIBLE);
                 } else {
                     StatusBarUtils.setTransparent(CollapsingToolbarLayoutActivity.this);

@@ -19,7 +19,7 @@ import butterknife.ButterKnife;
  **/
 public abstract class BaseActivity extends AppCompatActivity {
 
-    private Toolbar toolbar;
+    protected Toolbar toolbar;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:fitsSystemWindows="true"
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            app:title="Android"
+            app:titleEnabled="true"
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:scaleType="centerCrop"
+                android:fitsSystemWindows="true"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.8"
+                app:layout_scrollFlags="scroll|snap|enterAlways|enterAlwaysCollapsed"
+                android:id="@+id/topImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@null"
+                android:src="@mipmap/android" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:navigationIcon="@drawable/abc_vector_test"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:titleTextColor="@color/white" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#455A64"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Design for Android"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:lineSpacingExtra="10dp"
+                android:text="Android users expect your app to look and behave in a way that's consistent with the platform. Not only should you follow material design guidelines for visual and navigation patterns, but you should also follow quality guidelines for compatibility, performance, security, and more.\nMotion focuses attention and maintains continuity through subtle feedback and coherent transitions. As elements appear on screen, they transform and reorganize the environment with interactions generating new transformations.\nMaterial Design is guided by print design methods — typography, grids, space, scale, color, and imagery — to create hierarchy, meaning, and focus that immerse viewers in the experience.\nThe following links provide everything you need to design a high quality Android app.\nMaterial Components are interactive building blocks for creating a user interface, and include a built-in states system to communicate focus, selection, activation, error, hover, press, drag, and disabled states. Component libraries are available for Android, iOS, Flutter, and the web.\nMaterial Design is inspired by the physical world and its textures, including how they reflect light and cast shadows. Material surfaces reimagine the mediums of paper and ink.\nThe Material Design type scale provides 13 typography styles for everything from headlines to body text and captions. Each style has a clear meaning and intended application within an interface.Important attributes, such as the typeface, font weight, and letter case, can be modified to match your brand and design.\nApplying shape styles can help direct attention or identify components, communicate their state, and express your brand.All Material Components are grouped into shape categories based on their size (small, medium, large). These global styles provide a way to quickly change the shape of similarly-sized components.You can generate your own shape styles with the shape customization tool."
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:src="@android:drawable/ic_dialog_email"
+        app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="bottom|end" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

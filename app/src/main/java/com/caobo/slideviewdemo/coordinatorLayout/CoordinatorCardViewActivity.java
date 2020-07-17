@@ -52,14 +52,12 @@ public class CoordinatorCardViewActivity extends BaseActivity {
         viewPage.setAdapter(new FragmentAdapter(getSupportFragmentManager(), tabLayout.getTabCount()));
         // 设置ViewPager默认显示index
         viewPage.setCurrentItem(0);
-
     }
 
     @Override
     protected int getLayoutResID() {
         return R.layout.activity_coordinator_cardviewlayout;
     }
-
 
     class FragmentAdapter extends FragmentPagerAdapter {
 

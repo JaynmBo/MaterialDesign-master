@@ -73,16 +73,6 @@
         android:textAllCaps="false"
         android:textSize="14dp" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:gravity="center"
-        android:onClick="coordinatorClick"
-        android:text="CoordinatorLayout"
-        android:textAllCaps="false"
-        android:textSize="14dp" />
-
 
     <Button
         android:layout_width="match_parent"
@@ -118,6 +108,16 @@
         android:gravity="center"
         android:onClick="bottomNavClick"
         android:text="BottomNavigationView"
+        android:textAllCaps="false"
+        android:textSize="14dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:onClick="coordinatorClick"
+        android:text="CoordinatorLayout"
         android:textAllCaps="false"
         android:textSize="14dp" />
 
