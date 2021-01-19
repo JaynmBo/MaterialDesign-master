@@ -3,6 +3,9 @@
     <string name="drawer_open">open</string>
     <string name="drawer_close">close</string>
     <string name="head">head</string>
+    <string name="head1">head1</string>
+    <string name="head2">head2</string>
+    <string name="head3">head3</string>
 
     <string name="title">MD</string>
 
