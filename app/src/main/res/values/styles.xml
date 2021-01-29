@@ -63,6 +63,7 @@
         <item name="android:layout_height">80dp</item>
         <item name="android:layout_marginBottom">10dp</item>
     </style>
+
     <style name="nothing_img">
         <item name="android:layout_width">80dp</item>
         <item name="android:layout_height">80dp</item>
