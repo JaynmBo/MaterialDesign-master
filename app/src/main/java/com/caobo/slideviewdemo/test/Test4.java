@@ -16,5 +16,4 @@ public class Test4 {
     protected Object clone() throws CloneNotSupportedException {
         return super.clone();
     }
-    // TODO: 2021/2/2  
 }
